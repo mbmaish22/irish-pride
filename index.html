@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irish Tricolour - Responsive Flag</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        .wrapper {
+            width: 933px;
+            height: 400px;
+            background-color: rgb(10, 10, 10);
+            display: flex;
+        }
+        
+        .column {  
+            height: 100%;
+            width: 300px;
+            flex: 1;
+        }
+        
+        .column1 {
+            background-color: green;
+        }
+        
+        .column2 {
+            background-color: white;
+        }
+        
+        .column3 {
+            background-color: orange;
+        }
+        
+        /* Media Queries for Responsive Design */
+        
+        /* 1200px and above - wrapper takes full viewport width, columns 400px each */
+        @media screen and (min-width: 1200px) {
+            .wrapper {
+                width: 100vw;
+            }
+            .column {
+                width: 400px;
+            }
+        }
+        
+        /* 900px and above (but below 1200px) - columns are 33% of container */
+        @media screen and (min-width: 900px) and (max-width: 1199px) {
+            .column {
+                width: 33%;
+            }
+        }
+        
+        /* 700px and below - columns stack horizontally but take full width */
+        @media screen and (max-width: 700px) {
+            .wrapper {
+                height: 200px;
+            }
+            .column {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="column column1"></div>
+        <div class="column column2"></div>
+        <div class="column column3"></div>
+    </div>
+</body>
+</html>
